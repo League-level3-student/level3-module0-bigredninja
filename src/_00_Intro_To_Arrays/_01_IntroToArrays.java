@@ -57,7 +57,9 @@ public class _01_IntroToArrays {
 			}
 		}
         // 10 print the entire array to see if step 8 was correct
-
+          for (int i : Numbers) {
+			System.out.println(Numbers);
+		}
         // 11. print the largest number in the array.
 
         // 12. print only the last element in the array
