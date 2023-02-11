@@ -27,10 +27,13 @@ public class _00_1D_Array_Methods {
     //3. Complete the method so that it returns true if the integer
     //   array contains the value specified by the second parameter.
     //   It should otherwise return false.
-    public static boolean containsIntValue(int[] array, int value) {
-
-        return false;
-    }
+  //  public static boolean containsIntValue(int[] array, int value) {
+    	boolean contains = false;
+    	//if () {
+			 
+	//}
+      //  return contains;
+    //}
 
     //4. Complete the method so that it returns the index of the,
     //   first instance that the specified value occurs in the array.
@@ -40,3 +43,4 @@ public class _00_1D_Array_Methods {
         return 0;
     }
 }
+
