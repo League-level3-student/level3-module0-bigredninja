@@ -1,6 +1,7 @@
 package _02_Firework_Display;
 
 import java.awt.Graphics;
+import java.util.Iterator;
 import java.util.Random;
 
 /*
@@ -14,16 +15,19 @@ public class Firework{
     public static final int GRAVITY = 1;
 
     // 1. Create an array of Spark objects called sparks. Don't initialize it.
-
+    Spark[]sparks;
     public boolean dead = false;
 
     public Firework() {
         // 2. Initialize the Spark array to contain 100 Sparks. 
 
-
+    	sparks = new Spark[100];
         // 3. Iterate through the sparks and initialize each one to a new Spark.
         //    Make each spark start at the middle bottom of the screen.
-
+    	for (int i = 0; i < sparks.length; i++) {
+			Spark spark = sparks[i];
+			sparks[i] = new Spark();
+		}
     }
 
     public void launch() {
