@@ -24,9 +24,11 @@ public class Firework{
     	sparks = new Spark[100];
         // 3. Iterate through the sparks and initialize each one to a new Spark.
         //    Make each spark start at the middle bottom of the screen.
+    	int x = FireworkDisplay.WIDTH/2;
+    	int y = 0; //FireworkDisplay.HEIGHT;
+    	
     	for (int i = 0; i < sparks.length; i++) {
-			Spark spark = sparks[i];
-			sparks[i] = new Spark();
+			sparks[i] = new Spark(x,y);
 		}
     }
 
