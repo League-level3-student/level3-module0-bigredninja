@@ -23,13 +23,13 @@ public class Firework{
 
     	sparks = new Spark[100];
         // 3. Iterate through the sparks and initialize each one to a new Spark.
-        //    Make each spark start at the middle bottom of the screen.
-    	//int x = FireworkDisplay.WIDTH/2;
-    	//int y = 0; //FireworkDisplay.HEIGHT;
+        	//Make each spark start at the middle bottom of the screen.
+    	int x = FireworkDisplay.WIDTH/2;
+    	int y = 0; //FireworkDisplay.HEIGHT;
     	
-    	//for (int i = 0; i < sparks.length; i++) {
-			//sparks[i] = new Spark(x,y);
-		//}
+    	for (int i = 0; i < sparks.length; i++) {
+			sparks[i] = new Spark(x,y);
+		}
     	launch();
     }
 
@@ -40,7 +40,8 @@ public class Firework{
     	int y = 0; //FireworkDisplay.HEIGHT;
     	
     	for (int i = 0; i < sparks.length; i++) {
-			sparks[i] = new Spark(x,y);
+    		sparks[i].x = x;
+    		sparks[i].y = y;
 		}
     }
 
@@ -80,5 +81,10 @@ public class Firework{
         // 5. Iterate through each spark
         // 6. Set the color to the spark's color with g.setColor()
         // 7. Fill in an oval using the spark's x, y, and size with g.fillOval()
+      	for (int i = 0; i < sparks.length; i++) {
+      		Spark spark = sparks[i];
+      		g.setColor(spark.color);
+      		g.fillOval(spark.x, spark.y, i, i);
+      	}
     }
 }
