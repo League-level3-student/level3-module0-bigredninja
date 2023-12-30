@@ -31,8 +31,12 @@ public class _02_2DArrayPractice {
      *          6, 7, 8
      */
     public Integer[][] test1() {
-        
-        return null;
+    	Integer[][] newArray2d = { 
+        	{ 0, 1, 2 }, 
+        	{ 3, 4, 5 },
+        	{ 6, 7, 8 } 
+        };
+        return newArray2d;       
     }
     
     /*
@@ -41,8 +45,11 @@ public class _02_2DArrayPractice {
      *          "e", "f", "g", "e"
      */
     public String[][] test2() {
-        
-        return null;
+    	String[][] newArray2d = { 
+            	{ "a", "b", "c", "d"}, 
+            	{ "e", "f", "g", "e"},
+            };
+        return newArray2d;
     }
     
     /*
@@ -54,8 +61,14 @@ public class _02_2DArrayPractice {
      *          true, false
      */
     public Boolean[][] test3() {
-        
-        return null;
+    	Boolean[][] boleanArray = {
+    			{true, false},
+    			{false, false},
+    			{false, true},
+    			{true, true},
+    			{true, false},
+    	};
+        return boleanArray;
     }
     
     /*
