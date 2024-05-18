@@ -1,5 +1,7 @@
 package _03_Intro_to_2D_Arrays;
 
+import java.util.Iterator;
+
 /*
  *  A 2D array is comparable to a matrix/grid ordered by rows and columns.
  *  A 2D array that holds 3, 1D arrays with each 1D array having 3 elements
@@ -61,14 +63,14 @@ public class _02_2DArrayPractice {
      *          true, false
      */
     public Boolean[][] test3() {
-    	Boolean[][] boleanArray = {
+    	Boolean[][] booleanArray = {
     			{true, false},
     			{false, false},
     			{false, true},
     			{true, true},
     			{true, false},
     	};
-        return boleanArray;
+        return booleanArray;
     }
     
     /*
@@ -98,9 +100,12 @@ public class _02_2DArrayPractice {
      *          null, null, null, Object
      */
     public Object test4() {
-        Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} };
+        Object[][] objects = { 
+        		{null, null, null, null}, 
+        		{null, null, null, new Object()}
+        };
         
-        return null;
+        return objects[1][3];
     }
     
     /* Given the array of Objects below, return the element that is not null
@@ -108,9 +113,12 @@ public class _02_2DArrayPractice {
      *          null, null, null, null
      */
     public Object test5() {
-        Object[][] objects = { {null, null, new Object(), null}, {null, null, null, null} };
+        Object[][] objects = { 
+        						{null, null, new Object(), null}, 
+        						{null, null, null		 , null} 
+        					 };
         
-        return null;
+        return objects[0][2];
     }
     
     /*
@@ -118,9 +126,15 @@ public class _02_2DArrayPractice {
      * first row (row 0)
      */
     public Integer test6() {
-        int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
-        
-        return null;
+    	int temp = 0;
+        int[][] nums = { {8, 7, 6, 5},
+        				 {4, 3}, 
+        				 {2, 1, 0} };
+        int[] row = nums[0];
+        for (int i = 0; i < row.length; i++) {
+        	System.out.println();
+		}
+        return temp;
     }
     
     /*
