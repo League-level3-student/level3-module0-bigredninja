@@ -133,6 +133,7 @@ public class _02_2DArrayPractice {
         int[] row = nums[0];
         for (int i = 0; i < row.length; i++) {
         	System.out.println();
+        	temp = temp + row[i];
 		}
         return temp;
     }
