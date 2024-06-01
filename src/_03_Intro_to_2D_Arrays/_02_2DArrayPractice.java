@@ -126,6 +126,7 @@ public class _02_2DArrayPractice {
      * first row (row 0)
      */
     public Integer test6() {
+    	int temp2 = 0;
     	int temp = 0;
         int[][] nums = { {8, 7, 6, 5},
         				 {4, 3}, 
@@ -137,7 +138,7 @@ public class _02_2DArrayPractice {
 		}
         return temp;
     }
-    
+    //this is a test
     /*
      * Write an algorithm to return the sum of all the numbers in the
      * first column (column 0)
