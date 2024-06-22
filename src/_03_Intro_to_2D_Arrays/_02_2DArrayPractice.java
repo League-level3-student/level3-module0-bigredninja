@@ -139,14 +139,23 @@ public class _02_2DArrayPractice {
         return temp;
     }
     //this is a test
+    //this is a test
     /*
      * Write an algorithm to return the sum of all the numbers in the
      * first column (column 0)
      */
     public Integer test7() {
-        int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
-        
-        return null;
+    	int temp = 0;
+    	int temp4 = 0;
+        int[][] nums = { {8, 7, 6, 5},
+        				 {4, 3}, 
+        				 {2, 1, 0} };
+     
+        for (int i = 0; i < 3; i++) {
+        	System.out.println();
+        	temp = temp + nums[i][0];
+		}
+        return temp;
     }
     
     /*
