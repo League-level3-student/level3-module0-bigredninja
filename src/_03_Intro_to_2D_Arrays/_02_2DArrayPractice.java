@@ -134,11 +134,11 @@ public class _02_2DArrayPractice {
 	 */
 	public Integer getSumByRow(int[][] matrix, int rowNum) {
 		int sum = 0;
-		//make a new array of the values that are the specified row
+		// make a new array of the values that are the specified row
 		int[] row = matrix[rowNum];
-		//to add up all the values in the specified row 
+		// to add up all the values in the specified row
 		for (int i = 0; i < row.length; i++) {
-			//on every iteration add 1 item of the row to the previous sum
+			// on every iteration add 1 item of the row to the previous sum
 			sum = sum + row[i];
 			System.out.println("sum =" + sum);
 		}
@@ -150,8 +150,15 @@ public class _02_2DArrayPractice {
 	 * column
 	 */
 	public Integer getSumByColumn(int[][] matrix, int col) {
-
-		return null;
+		int sum = 0;
+		// Find the length of the array
+		int length = matrix.length;
+		// iterate through all the rows
+		for (int i = 0; i < length; i++) {
+			// Iterate thru the rows and add a particular column;
+			sum = sum + matrix[i][col];
+		}
+		return sum;
 	}
 
 	/*
@@ -168,23 +175,58 @@ public class _02_2DArrayPractice {
 	 * the neighbor does not exist, i.e. it's outside the grid boundaries, return
 	 * null.
 	 */
-	public Integer getEastNeighbor(int[][] matrix, int row, int col) {
-
-		return null;
+	public Integer getEastNeighbor(int[][] matrix, int rowIndex, int colIndex) {
+		// add 1 to the col.
+		// if the col is greater than the length of the max col then return null
+		// if not return matrix with row,col+1
+		int[] rowArray = matrix[rowIndex];
+		int numColumns = rowArray.length;
+		int eastIndex = colIndex + 1;
+		if (eastIndex >= numColumns) {
+			return null;
+		} else {
+			return rowArray[eastIndex];
+		}
 	}
 
-	public Integer getWestNeighbor(int[][] matrix, int row, int col) {
-
-		return null;
+	public Integer getWestNeighbor(int[][] matrix, int rowIndex, int colIndex) {
+		// opisite of east neighbor, subtract 1 value to the location of the desired
+		// number
+		int[] rowArray = matrix[rowIndex];
+		int westIndex = colIndex - 1;
+		if (westIndex < 0) {
+			return null;
+		} else {
+			return rowArray[westIndex];
+		}
 	}
 
-	public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
+	public Integer getNorthNeighbor(int[][] matrix, int rowIndex, int colIndex) {
+		int numRows = matrix.length;
+		if (rowIndex <= 0 || rowIndex >= numRows) {
+			return null;
+		}
+		// [1] [2] [3]
+		// [4] [5] [6]
+		// [7] [8] [9]
+		// [10][11][12]
 
-		return null;
+		// Subtract 1 value from the location of the desired number on the row
+		int northIndex = rowIndex - 1;
+		return matrix[northIndex][colIndex];
 	}
 
 	public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
+		int numRows = matrix.length;
+		if (row < -1 || row >= numRows-1) {
+			return null;
+		}
+		// [1] [2] [3]
+		// [4] [5] [6]
+		// [7] [8] [9]
+		// [10][11][12]
 
-		return null;
+		int southIndex = row + 1;
+		return matrix[southIndex][col];
 	}
 }

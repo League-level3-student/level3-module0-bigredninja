@@ -7,7 +7,15 @@ public class Pixel{
     public int y;
     public Color color;
 
-    public Pixel(int x, int y) {
+    public Color getColor() {
+		return color;
+	}
+
+	public void setColor(Color color) {
+		this.color = color;
+	}
+
+	public Pixel(int x, int y) {
         this.x = x;
         this.y = y;
         color = Color.WHITE;

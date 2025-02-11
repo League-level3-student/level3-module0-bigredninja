@@ -41,6 +41,7 @@ public class PixelArtMaker implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
+    	
     }
 
     @Override
